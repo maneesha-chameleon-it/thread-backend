@@ -1,0 +1,4 @@
+export default {
+    ERR_UNKNOWN: 'ERR_UNKNOWN',
+    'INVALID_LANGUAGE': 'INVALID_LANGUAGE'
+};
