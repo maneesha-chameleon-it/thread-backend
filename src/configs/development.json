@@ -1,0 +1,27 @@
+{
+    "env": "test",
+    "PORT": 3008,
+    "dbConfig": {
+        "host": "localhost",
+        "user": "root",
+        "password": "React@123",
+        "database": "thread",
+        "pool": {
+            "min": 0,
+            "max": 5
+        }
+    },
+    "secretKey": "secretKey",
+    "log": {
+        "format": "dev",
+        "dir": "../logs"
+    },
+    "cors": {
+        "origin": true,
+        "credentials": true
+    },
+    "serverConfig": {
+        "multiLanguage" : true,
+        "defaultLanguage": "en"
+    }
+}

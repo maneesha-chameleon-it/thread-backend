@@ -27,7 +27,7 @@ export const success = (httpMethod, message, data, status = 1) => {
 export const failure = (e) => {
     if(e.name === 'ApplicationException' ) {
         return { 
-            statusCode: e.statusCode, 
+            statusCode: e.status, 
             response: {
                 code: e.code,
                 status: -1,

@@ -1,0 +1,14 @@
+{
+    "keep": {
+        "days": false,
+        "amount": 30
+    },
+    "auditLog": "/home/lenovo/git/thread-backend/src/logs/debug/.f629908b537b925d2ce0e0562f9f7ecbf91d8607-audit.json",
+    "files": [
+        {
+            "date": 1653720738675,
+            "name": "/home/lenovo/git/thread-backend/src/logs/debug/2022-05-28.log",
+            "hash": "4f75993fb0b6da4f216ed596a65f93e0"
+        }
+    ]
+}
