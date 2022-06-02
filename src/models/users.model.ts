@@ -9,7 +9,7 @@ export class UserModel extends Model<User, UserCreationAttributes> implements Us
   public password: string;
   public name: string;
   public role: string;
-  public phoneNumber: string;
+  public phoneNumber: number;
   public address: string;
   public emailStatus: string;
 
@@ -43,7 +43,7 @@ export default function (sequelize: Sequelize): typeof UserModel {
       },
       phoneNumber: {
         allowNull: false,
-        type: DataTypes.STRING(45),
+        type: DataTypes.INTEGER,
       },
       address: {
         allowNull: false,

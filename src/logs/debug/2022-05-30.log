@@ -1,0 +1,53 @@
+2022-05-30 16:30:20 info: 3ms Executed (default): SELECT 1+1 AS result
+2022-05-30 16:30:20 info: 20ms Executed (default): CREATE TABLE IF NOT EXISTS `users` (`id` INTEGER auto_increment , `email` VARCHAR(45) NOT NULL, `password` VARCHAR(255) NOT NULL, `name` VARCHAR(45) NOT NULL, `role` VARCHAR(45) NOT NULL, `phone_number` INTEGER NOT NULL, `address` VARCHAR(45) NOT NULL, `email_status` VARCHAR(45) NOT NULL, `created_at` DATETIME NOT NULL, `updated_at` DATETIME NOT NULL, PRIMARY KEY (`id`)) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE utf8mb4_general_ci;
+2022-05-30 16:30:20 info: 15ms Executed (default): SHOW INDEX FROM `users`
+2022-05-30 16:36:01 info: =================================
+2022-05-30 16:36:01 info: ======= ENV: development =======
+2022-05-30 16:36:01 info: 🚀 App listening on the port 3008
+2022-05-30 16:36:01 info: =================================
+2022-05-30 16:36:01 info: 3ms Executed (default): SELECT 1+1 AS result
+2022-05-30 16:36:01 info: 4ms Executed (default): CREATE TABLE IF NOT EXISTS `users` (`id` INTEGER auto_increment , `email` VARCHAR(45) NOT NULL, `password` VARCHAR(255) NOT NULL, `name` VARCHAR(45) NOT NULL, `role` VARCHAR(45) NOT NULL, `phone_number` INTEGER NOT NULL, `address` VARCHAR(45) NOT NULL, `email_status` VARCHAR(45) NOT NULL, `created_at` DATETIME NOT NULL, `updated_at` DATETIME NOT NULL, PRIMARY KEY (`id`)) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE utf8mb4_general_ci;
+2022-05-30 16:36:01 info: 7ms Executed (default): SHOW INDEX FROM `users`
+2022-05-30 16:40:58 info: =================================
+2022-05-30 16:40:58 info: ======= ENV: development =======
+2022-05-30 16:40:58 info: 🚀 App listening on the port 3008
+2022-05-30 16:40:58 info: =================================
+2022-05-30 16:40:58 info: 2ms Executed (default): SELECT 1+1 AS result
+2022-05-30 16:40:58 info: 4ms Executed (default): CREATE TABLE IF NOT EXISTS `users` (`id` INTEGER auto_increment , `email` VARCHAR(45) NOT NULL, `password` VARCHAR(255) NOT NULL, `name` VARCHAR(45) NOT NULL, `role` VARCHAR(45) NOT NULL, `phone_number` INTEGER NOT NULL, `address` VARCHAR(45) NOT NULL, `email_status` VARCHAR(45) NOT NULL, `created_at` DATETIME NOT NULL, `updated_at` DATETIME NOT NULL, PRIMARY KEY (`id`)) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE utf8mb4_general_ci;
+2022-05-30 16:40:58 info: 6ms Executed (default): SHOW INDEX FROM `users`
+2022-05-30 16:41:45 info: =================================
+2022-05-30 16:41:45 info: ======= ENV: development =======
+2022-05-30 16:41:45 info: 🚀 App listening on the port 3008
+2022-05-30 16:41:45 info: =================================
+2022-05-30 16:41:45 info: 2ms Executed (default): SELECT 1+1 AS result
+2022-05-30 16:41:45 info: 5ms Executed (default): CREATE TABLE IF NOT EXISTS `users` (`id` INTEGER auto_increment , `email` VARCHAR(45) NOT NULL, `password` VARCHAR(255) NOT NULL, `name` VARCHAR(45) NOT NULL, `role` VARCHAR(45) NOT NULL, `phone_number` INTEGER NOT NULL, `address` VARCHAR(45) NOT NULL, `email_status` VARCHAR(45) NOT NULL, `created_at` DATETIME NOT NULL, `updated_at` DATETIME NOT NULL, PRIMARY KEY (`id`)) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE utf8mb4_general_ci;
+2022-05-30 16:41:45 info: 6ms Executed (default): SHOW INDEX FROM `users`
+2022-05-30 16:45:01 info: =================================
+2022-05-30 16:45:01 info: ======= ENV: development =======
+2022-05-30 16:45:01 info: 🚀 App listening on the port 3008
+2022-05-30 16:45:01 info: =================================
+2022-05-30 16:45:01 info: 2ms Executed (default): SELECT 1+1 AS result
+2022-05-30 16:45:01 info: 5ms Executed (default): CREATE TABLE IF NOT EXISTS `users` (`id` INTEGER auto_increment , `email` VARCHAR(45) NOT NULL, `password` VARCHAR(255) NOT NULL, `name` VARCHAR(45) NOT NULL, `role` VARCHAR(45) NOT NULL, `phone_number` INTEGER NOT NULL, `address` VARCHAR(45) NOT NULL, `email_status` VARCHAR(45) NOT NULL, `created_at` DATETIME NOT NULL, `updated_at` DATETIME NOT NULL, PRIMARY KEY (`id`)) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE utf8mb4_general_ci;
+2022-05-30 16:45:01 info: 5ms Executed (default): SHOW INDEX FROM `users`
+2022-05-30 16:51:36 info: =================================
+2022-05-30 16:51:36 info: ======= ENV: development =======
+2022-05-30 16:51:36 info: 🚀 App listening on the port 3008
+2022-05-30 16:51:36 info: =================================
+2022-05-30 16:51:36 info: 3ms Executed (default): SELECT 1+1 AS result
+2022-05-30 16:51:36 info: 5ms Executed (default): CREATE TABLE IF NOT EXISTS `users` (`id` INTEGER auto_increment , `email` VARCHAR(45) NOT NULL, `password` VARCHAR(255) NOT NULL, `name` VARCHAR(45) NOT NULL, `role` VARCHAR(45) NOT NULL, `phone_number` INTEGER NOT NULL, `address` VARCHAR(45) NOT NULL, `email_status` VARCHAR(45) NOT NULL, `created_at` DATETIME NOT NULL, `updated_at` DATETIME NOT NULL, PRIMARY KEY (`id`)) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE utf8mb4_general_ci;
+2022-05-30 16:51:36 info: 6ms Executed (default): SHOW INDEX FROM `users`
+2022-05-30 16:54:00 info: =================================
+2022-05-30 16:54:00 info: ======= ENV: development =======
+2022-05-30 16:54:00 info: 🚀 App listening on the port 3008
+2022-05-30 16:54:00 info: =================================
+2022-05-30 16:54:00 info: 3ms Executed (default): SELECT 1+1 AS result
+2022-05-30 16:54:00 info: 4ms Executed (default): CREATE TABLE IF NOT EXISTS `users` (`id` INTEGER auto_increment , `email` VARCHAR(45) NOT NULL, `password` VARCHAR(255) NOT NULL, `name` VARCHAR(45) NOT NULL, `role` VARCHAR(45) NOT NULL, `phone_number` INTEGER NOT NULL, `address` VARCHAR(45) NOT NULL, `email_status` VARCHAR(45) NOT NULL, `created_at` DATETIME NOT NULL, `updated_at` DATETIME NOT NULL, PRIMARY KEY (`id`)) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE utf8mb4_general_ci;
+2022-05-30 16:54:00 info: 6ms Executed (default): SHOW INDEX FROM `users`
+2022-05-30 16:54:00 info: 45ms Executed (default): CREATE TABLE IF NOT EXISTS `productBuilder` (`id` INTEGER auto_increment , `fabric_id` INTEGER NOT NULL, `measuring_for` VARCHAR(45) NOT NULL, `type_of_room` VARCHAR(255) NOT NULL, `kind_of_room` VARCHAR(45) NOT NULL, `window_name` VARCHAR(45) NOT NULL, `pole_or_track_status` VARCHAR(45) NOT NULL, `width` INTEGER NOT NULL, `height` INTEGER NOT NULL, `panel` VARCHAR(45) NOT NULL, `style` VARCHAR(45) NOT NULL, `lining` VARCHAR(45) NOT NULL, `pole_and_track` VARCHAR(45) NOT NULL, `pooling` VARCHAR(45) NOT NULL, `total_price` INTEGER NOT NULL, `product_type` VARCHAR(45) NOT NULL, `created_at` DATETIME NOT NULL, `updated_at` DATETIME NOT NULL, PRIMARY KEY (`id`)) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE utf8mb4_general_ci;
+2022-05-30 16:54:00 info: 7ms Executed (default): SHOW INDEX FROM `productBuilder`
+2022-05-30 22:00:50 info: =================================
+2022-05-30 22:00:50 info: 1ms Executed (default): SELECT 1+1 AS result
+2022-05-30 22:00:50 info: 2ms Executed (default): CREATE TABLE IF NOT EXISTS `users` (`id` INTEGER auto_increment , `email` VARCHAR(45) NOT NULL, `password` VARCHAR(255) NOT NULL, `name` VARCHAR(45) NOT NULL, `role` VARCHAR(45) NOT NULL, `phone_number` INTEGER NOT NULL, `address` VARCHAR(45) NOT NULL, `email_status` VARCHAR(45) NOT NULL, `created_at` DATETIME NOT NULL, `updated_at` DATETIME NOT NULL, PRIMARY KEY (`id`)) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE utf8mb4_general_ci;
+2022-05-30 22:00:50 info: 4ms Executed (default): SHOW INDEX FROM `users`
+2022-05-30 22:00:50 info: 3ms Executed (default): CREATE TABLE IF NOT EXISTS `productBuilder` (`id` INTEGER auto_increment , `fabric_id` INTEGER NOT NULL, `measuring_for` VARCHAR(45) NOT NULL, `type_of_room` VARCHAR(255) NOT NULL, `kind_of_room` VARCHAR(45) NOT NULL, `window_name` VARCHAR(45) NOT NULL, `pole_or_track_status` VARCHAR(45) NOT NULL, `width` INTEGER NOT NULL, `height` INTEGER NOT NULL, `panel` VARCHAR(45) NOT NULL, `style` VARCHAR(45) NOT NULL, `lining` VARCHAR(45) NOT NULL, `pole_and_track` VARCHAR(45) NOT NULL, `pooling` VARCHAR(45) NOT NULL, `total_price` INTEGER NOT NULL, `product_type` VARCHAR(45) NOT NULL, `created_at` DATETIME NOT NULL, `updated_at` DATETIME NOT NULL, PRIMARY KEY (`id`)) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE utf8mb4_general_ci;
+2022-05-30 22:00:50 info: 2ms Executed (default): SHOW INDEX FROM `productBuilder`
