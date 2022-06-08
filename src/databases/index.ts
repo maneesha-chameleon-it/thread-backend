@@ -3,7 +3,9 @@ import Sequelize from 'sequelize';
 import { dbConfig } from '@interfaces/db.interface';
 import UserModel from '@models/users.model';
 import { logger } from '@utils/logger';
-import ProductBuilderModel from '@models/productBuilder.mode';
+import ProductBuilderModel from '@models/productBuilder.model';
+import  FabricModel  from '@/models/fabric.model';
+import  StyleModel  from '@/models/style.model';
 
 const { host, user, password, database, pool }: dbConfig = config.get('dbConfig');
 const sequelize = new Sequelize.Sequelize(database, user, password, {
@@ -26,12 +28,14 @@ const sequelize = new Sequelize.Sequelize(database, user, password, {
   },
   benchmark: true,
 });
+  sequelize.authenticate();
 
-sequelize.authenticate();
 
 const DB = {
   Users: UserModel(sequelize),
   ProductBuilder: ProductBuilderModel(sequelize),
+  Fabric: FabricModel(sequelize),
+  Style: StyleModel(sequelize),
   sequelize, // connection instance (RAW queries)
   Sequelize, // library
 };

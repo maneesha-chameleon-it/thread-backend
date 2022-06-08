@@ -3,8 +3,9 @@ import { ProductBuilder } from '@interfaces/productBuilder.interface';
 
 export type ProductBuilderCreationAttributes = Optional<ProductBuilder, 'id' | 'fabric_id' | 'measuring_for' | 'type_of_room' 
 | 'kind_of_room' | 'window_name' | 'pole_or_track_status' | 'width'
-| 'height'| 'panel'| 'style'| 'lining' | 'pole_and_track' | 'pooling' 
-| 'total_price' | 'product_type'>;
+| 'height'| 'panel' | 'curtain_close' | 'style'| 'lining' | 'pole_and_track' 
+| 'poleMaterial' | 'poleDiameter' | 'polEnd' | 'polFinish' | 'trackEnd' | 'trackFinish' | 'pooling' |   'total_price' 
+| 'product_type'>;
 
 export class ProductBuilderModel extends Model<ProductBuilder, ProductBuilderCreationAttributes> implements ProductBuilder {
   public id: number;
@@ -17,9 +18,16 @@ export class ProductBuilderModel extends Model<ProductBuilder, ProductBuilderCre
   public width: number;
   public height: number;
   public panel: string;
+  public curtain_close: string;
   public style: string;
   public lining: string;
   public pole_and_track: string;
+  public poleMaterial: string;
+  public poleDiameter: number;
+  public polEnd: string;
+  public polFinish: string;
+  public trackEnd: string;
+  public trackFinish: string;
   public pooling: string;
   public total_price: number;
   public product_type: string;
@@ -71,6 +79,10 @@ export default function (sequelize: Sequelize): typeof ProductBuilderModel {
         allowNull: false,
         type: DataTypes.STRING(45),
       },
+      curtain_close: {
+        allowNull: false,
+        type: DataTypes.STRING(45),
+      },
       style: {
         allowNull: false,
         type: DataTypes.STRING(45),
@@ -80,6 +92,30 @@ export default function (sequelize: Sequelize): typeof ProductBuilderModel {
         type: DataTypes.STRING(45),
       },
       pole_and_track: {
+        allowNull: false,
+        type: DataTypes.STRING(45),
+      },
+      poleMaterial: {
+        allowNull: false,
+        type: DataTypes.STRING(45),
+      },
+      poleDiameter: {
+        allowNull: false,
+        type: DataTypes.INTEGER,
+      },
+      polEnd: {
+        allowNull: false,
+        type: DataTypes.STRING(45),
+      },
+      polFinish: {
+        allowNull: false,
+        type: DataTypes.STRING(45),
+      },
+      trackEnd: {
+        allowNull: false,
+        type: DataTypes.STRING(45),
+      },
+      trackFinish: {
         allowNull: false,
         type: DataTypes.STRING(45),
       },

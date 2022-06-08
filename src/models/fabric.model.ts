@@ -1,107 +1,91 @@
 import { Sequelize, DataTypes, Model, Optional } from 'sequelize';
-import { ProductBuilder } from '@interfaces/productBuilder.interface';
+import { Fabric } from '@interfaces/fabric.interface';
 
-export type ProductBuilderCreationAttributes = Optional<ProductBuilder, 'id' | 'fabric_id' | 'measuring_for' | 'type_of_room' 
-| 'kind_of_room' | 'window_name' | 'pole_or_track_status' | 'width'
-| 'height'| 'panel'| 'style'| 'lining' | 'pole_and_track' | 'pooling' 
-| 'total_price' | 'product_type'>;
+export type FabricCreationAttributes = Optional<Fabric, 'id' | 'product_builder_id' | 'name' | 'color' 
+| 'price' | 'category' | 'milled_country_name' | 'composition'
+| 'cleaning'| 'small_curtains'| 'medium_curtains'| 'large_curtains' | 'fabric_type'>;
 
-export class ProductBuilderModel extends Model<ProductBuilder, ProductBuilderCreationAttributes> implements ProductBuilder {
+export class FabricModel extends Model<Fabric, FabricCreationAttributes> implements Fabric {
   public id: number;
-  public fabric_id: number;
-  public measuring_for: string;
-  public type_of_room: string;
-  public kind_of_room: string;
-  public window_name: string;
-  public pole_or_track_status: string;
-  public width: number;
-  public height: number;
-  public panel: string;
-  public style: string;
-  public lining: string;
-  public pole_and_track: string;
-  public pooling: string;
-  public total_price: number;
-  public product_type: string;
+  public product_builder_id: number;
+  public name: string;
+  public color: string;
+  public price: number;
+  public category: string;
+  public milled_country_name: string;
+  public composition: string;
+  public cleaning: string;
+  public small_curtains: number;
+  public medium_curtains: number;
+  public large_curtains: number;
+  public fabric_type: string;
   public readonly createdAt!: Date;
   public readonly updatedAt!: Date;
 }
 
-export default function (sequelize: Sequelize): typeof ProductBuilderModel {
-  ProductBuilderModel.init(
+export default function (sequelize: Sequelize): typeof FabricModel {
+  FabricModel.init(
     {
       id: {
         autoIncrement: true,
         primaryKey: true,
         type: DataTypes.INTEGER,
       },
-      fabric_id: {
+      product_builder_id: {
         allowNull: false,
         type: DataTypes.INTEGER,
       },
-      measuring_for: {
+      name: {
         allowNull: false,
         type: DataTypes.STRING(45),
       },
-      type_of_room: {
+      color: {
         allowNull: false,
         type: DataTypes.STRING(255),
       },
-      kind_of_room: {
-        allowNull: false,
-        type: DataTypes.STRING(45),
-      },
-      window_name: {
-        allowNull: false,
-        type: DataTypes.STRING(45),
-      },
-      pole_or_track_status: {
-        allowNull: false,
-        type: DataTypes.STRING(45),
-      },
-      width: {
+      price: {
         allowNull: false,
         type: DataTypes.INTEGER,
       },
-      height: {
+      category: {
+        allowNull: false,
+        type: DataTypes.STRING(45),
+      },
+      milled_country_name: {
+        allowNull: false,
+        type: DataTypes.STRING(45),
+      },
+      composition: {
+        allowNull: false,
+        type: DataTypes.STRING(45),
+      },
+      cleaning: {
+        allowNull: false,
+        type: DataTypes.STRING(45),
+      },
+      small_curtains: {
         allowNull: false,
         type: DataTypes.INTEGER,
       },
-      panel: {
-        allowNull: false,
-        type: DataTypes.STRING(45),
-      },
-      style: {
-        allowNull: false,
-        type: DataTypes.STRING(45),
-      },
-      lining: {
-        allowNull: false,
-        type: DataTypes.STRING(45),
-      },
-      pole_and_track: {
-        allowNull: false,
-        type: DataTypes.STRING(45),
-      },
-      pooling: {
-        allowNull: false,
-        type: DataTypes.STRING(45),
-      },
-      total_price: {
+      medium_curtains: {
         allowNull: false,
         type: DataTypes.INTEGER,
       },
-      product_type: {
+      large_curtains: {
+        allowNull: false,
+        type: DataTypes.INTEGER,
+      },
+      fabric_type: {
         allowNull: false,
         type: DataTypes.STRING(45),
       },
 
     },
     {
-      tableName: 'productBuilder',
+      tableName: 'fabric',
       sequelize,
     },
   );
 
-  return ProductBuilderModel;
+  return FabricModel;
 }

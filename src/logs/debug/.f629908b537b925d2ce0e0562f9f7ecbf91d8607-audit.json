@@ -19,6 +19,21 @@
             "date": 1654067552607,
             "name": "/home/lenovo/git/thread-backend/src/logs/debug/2022-06-01.log",
             "hash": "6d9ee9cc518810b70252cd32a9a56554"
+        },
+        {
+            "date": 1654171294681,
+            "name": "/home/lenovo/git/thread-backend/src/logs/debug/2022-06-02.log",
+            "hash": "21e1f387664c6b83edbbee7356a72367"
+        },
+        {
+            "date": 1654503557790,
+            "name": "/home/lenovo/git/thread-backend/src/logs/debug/2022-06-06.log",
+            "hash": "7c1583b87fa4db54af567f7fc94229f9"
+        },
+        {
+            "date": 1654580183624,
+            "name": "/home/lenovo/git/thread-backend/src/logs/debug/2022-06-07.log",
+            "hash": "f3a182e11353ff96166a5487d8b0f2f0"
         }
     ]
 }
