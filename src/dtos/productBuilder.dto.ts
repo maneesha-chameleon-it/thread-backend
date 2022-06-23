@@ -2,6 +2,8 @@ import { IsString, IsEmail, IsNumber } from 'class-validator';
 export class CreateProductBuilderDto {
   @IsNumber()
   public fabric_id: number;
+  @IsNumber()
+  public user_id: number;
   @IsString()
   public measuring_for: string;
   @IsString()
@@ -31,12 +33,14 @@ export class CreateProductBuilderDto {
   @IsNumber()
   public total_price: number;
   @IsString()
-  public product_type: string;
+  public image: string;
 
 }
 export class CreateProductBuilderFeaturePoleDto {
   @IsNumber()
   public fabric_id: number;
+  @IsNumber()
+  public user_id: number;
   @IsString()
   public measuring_for: string;
   @IsString()
@@ -74,12 +78,14 @@ export class CreateProductBuilderFeaturePoleDto {
   @IsNumber()
   public total_price: number;
   @IsString()
-  public product_type: string;
+  public image: string;
 
 }
 export class CreateProductBuilderFeatureTrackDto {
   @IsNumber()
   public fabric_id: number;
+  @IsNumber()
+  public user_id: number;
   @IsString()
   public measuring_for: string;
   @IsString()
@@ -113,6 +119,6 @@ export class CreateProductBuilderFeatureTrackDto {
   @IsNumber()
   public total_price: number;
   @IsString()
-  public product_type: string;
+  public image: string;
 
 }

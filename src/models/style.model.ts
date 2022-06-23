@@ -1,12 +1,12 @@
 import { Sequelize, DataTypes, Model, Optional } from 'sequelize';
 import { Style } from '@interfaces/style.interface';
 
-export type StyleCreationAttributes = Optional<Style, 'id' | 'fabric_type' | 'height' | 'width' 
+export type StyleCreationAttributes = Optional<Style, 'id' | 'style_type' | 'height' | 'width' 
 | 'price' >;
 
 export class StyleModel extends Model<Style, StyleCreationAttributes> implements Style {
   public id: number;
-  public fabric_type: string;
+  public style_type: string;
   public height: number;
   public width: number;
   public price: number;
@@ -22,7 +22,7 @@ export default function (sequelize: Sequelize): typeof StyleModel {
         primaryKey: true,
         type: DataTypes.INTEGER,
       },
-      fabric_type: {
+      style_type: {
         allowNull: false,
         type: DataTypes.STRING(45),
       },

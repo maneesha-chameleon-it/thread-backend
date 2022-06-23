@@ -9,7 +9,7 @@ export class CreateFabricDto {
   @IsString()
   public color: string;
   @IsNumber()
-  public price: number;
+  public price_per_meter: number;
   @IsString()
   public category: string;
   @IsString()
@@ -24,4 +24,6 @@ export class CreateFabricDto {
   public medium_curtains: number;
   @IsNumber()
   public large_curtains: number; 
+  @IsString()
+  public image: string;
 }

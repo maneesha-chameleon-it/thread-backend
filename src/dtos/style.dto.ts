@@ -1,7 +1,7 @@
 import { IsString, IsNumber } from 'class-validator';
 export class CreateStyleDto {
   @IsString()
-  public fabric_type: string;
+  public style_type: string;
   @IsNumber()
   public height: number;
   @IsNumber()

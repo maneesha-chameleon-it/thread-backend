@@ -3,6 +3,17 @@ tags:
   description: users API
 - name: productBuilder
   description: productBuilder API
+- name: fabric
+  description: fabric API
+- name: style
+  description: style API
+- name: cart
+  description: cart API
+- name: order
+  description: order API
+- name: payment
+  description: payment API
+
 paths:
 # [GET] users
   /users:
@@ -123,7 +134,7 @@ paths:
       parameters:
       - name: body
         in: body
-        description: user Data
+        description: productBuilder Data
         required: true
         schema:
           $ref: '#/definitions/productBuilder'
@@ -132,6 +143,532 @@ paths:
           description: 'Created'
         400:
           description: 'Bad Request'
+        409:
+          description: 'Conflict'
+        500:
+          description: 'Server Error'
+# [GET] productBuilder/id
+  /productBuilder/{id}:
+    get:
+      tags:
+      - productBuilder
+      summary: Find productBuilder By Id
+      parameters:
+      - name: id
+        in: path
+        description: productBuilder Id
+        required: true
+        type: integer
+      responses:
+        200:
+          description: 'OK'
+        409:
+          description: 'Conflict'
+        500:
+          description: 'Server Error'
+
+# [PUT] productBuilder/id
+    put:
+      tags:
+      - productBuilder
+      summary: Update productBuilder By Id
+      parameters:
+      - name: id
+        in: path
+        description: productBuilder Id
+        required: true
+        type: integer
+      - name: body
+        in: body
+        description: user Data
+        required: true
+        schema:
+          $ref: '#/definitions/productBuilder'
+      responses:
+        200:
+          description: 'OK'
+        400:
+          description: 'Bad Request'
+        409:
+          description: 'Conflict'
+        500:
+          description: 'Server Error'
+# [DELETE] productBuilder/id
+    delete:
+      tags:
+      - productBuilder
+      summary: Delete productBuilder By Id
+      parameters:
+      - name: id
+        in: path
+        description: productBuilder Id
+        required: true
+        type: integer
+      responses:
+        200:
+          description: 'OK'
+        409:
+          description: 'Conflict'
+        500:
+          description: 'Server Error'          
+
+# [GET] fabric
+  /fabric:
+    get:
+      tags:
+      - fabric
+      summary: Find All fabric
+      responses:
+        200:
+          description: 'OK'
+        500:
+          description: 'Server Error'  
+
+# [POST] fabric
+    post:
+      tags:
+      - fabric
+      summary: Add fabric
+      parameters:
+      - name: body
+        in: body
+        description: fabric Data
+        required: true
+        schema:
+          $ref: '#/definitions/fabric'
+      responses:
+        201:
+          description: 'Created'
+        400:
+          description: 'Bad Request'
+        409:
+          description: 'Conflict'
+        500:
+          description: 'Server Error'
+
+# [GET] fabric/id
+  /fabric/{id}:
+    get:
+      tags:
+      - fabric
+      summary: Find fabric By Id
+      parameters:
+      - name: id
+        in: path
+        description: fabric Id
+        required: true
+        type: integer
+      responses:
+        200:
+          description: 'OK'
+        409:
+          description: 'Conflict'
+        500:
+          description: 'Server Error'
+
+# [PUT] fabric/id
+    put:
+      tags:
+      - fabric
+      summary: Update fabric By Id
+      parameters:
+      - name: id
+        in: path
+        description: fabric Id
+        required: true
+        type: integer
+      - name: body
+        in: body
+        description: fabric Data
+        required: true
+        schema:
+          $ref: '#/definitions/fabric'
+      responses:
+        200:
+          description: 'OK'
+        400:
+          description: 'Bad Request'
+        409:
+          description: 'Conflict'
+        500:
+          description: 'Server Error'
+# [DELETE] fabric/id
+    delete:
+      tags:
+      - fabric
+      summary: Delete fabric By Id
+      parameters:
+      - name: id
+        in: path
+        description: fabric Id
+        required: true
+        type: integer
+      responses:
+        200:
+          description: 'OK'
+        409:
+          description: 'Conflict'
+        500:
+          description: 'Server Error'
+# [GET] style
+  /style:
+    get:
+      tags:
+      - style
+      summary: Find All style
+      responses:
+        200:
+          description: 'OK'
+        500:
+          description: 'Server Error'
+# [POST] style
+    post:
+      tags:
+      - style
+      summary: Add style
+      parameters:
+      - name: body
+        in: body
+        description: Style Data
+        required: true
+        schema:
+          $ref: '#/definitions/style'
+      responses:
+        201:
+          description: 'Created'
+        400:
+          description: 'Bad Request'
+        409:
+          description: 'Conflict'
+        500:
+          description: 'Server Error'
+# [GET] style/id
+  /style/{id}:
+    get:
+      tags:
+      - style
+      summary: Find style By Id
+      parameters:
+      - name: id
+        in: path
+        description: style Id
+        required: true
+        type: integer
+      responses:
+        200:
+          description: 'OK'
+        409:
+          description: 'Conflict'
+        500:
+          description: 'Server Error'
+# [PUT] style/id
+    put:
+      tags:
+      - style
+      summary: Update style By Id
+      parameters:
+      - name: id
+        in: path
+        description: style Id
+        required: true
+        type: integer
+      - name: body
+        in: body
+        description: style Data
+        required: true
+        schema:
+          $ref: '#/definitions/style'
+      responses:
+        200:
+          description: 'OK'
+        400:
+          description: 'Bad Request'
+        409:
+          description: 'Conflict'
+        500:
+          description: 'Server Error'
+# [DELETE] style/id
+    delete:
+      tags:
+      - style
+      summary: Delete style By Id
+      parameters:
+      - name: id
+        in: path
+        description: style Id
+        required: true
+        type: integer
+      responses:
+        200:
+          description: 'OK'
+        409:
+          description: 'Conflict'
+        500:
+          description: 'Server Error'
+# [GET] cart
+  /cart:
+    get:
+      tags:
+      - cart
+      summary: Find All cart
+      responses:
+        200:
+          description: 'OK'
+        500:
+          description: 'Server Error'
+# [POST] cart
+    post:
+      tags:
+      - cart
+      summary: Add cart
+      parameters:
+      - name: body
+        in: body
+        description: Cart Data
+        required: true
+        schema:
+          $ref: '#/definitions/cart'
+      responses:
+        201:
+          description: 'Created'
+        400:
+          description: 'Bad Request'
+        409:
+          description: 'Conflict'
+        500:
+          description: 'Server Error'
+# [PUT] cart/id
+    put:
+      tags:
+      - cart
+      summary: Update cart By Id
+      parameters:
+      - name: id
+        in: path
+        description: cart Id
+        required: true
+        type: integer
+      - name: body
+        in: body
+        description: cart Data
+        required: true
+        schema:
+          $ref: '#/definitions/cart'
+      responses:
+        200:
+          description: 'OK'
+        400:
+          description: 'Bad Request'
+        409:
+          description: 'Conflict'
+        500:
+          description: 'Server Error'
+# [DELETE] cart/id
+    delete:
+      tags:
+      - cart
+      summary: Delete cart By Id
+      parameters:
+      - name: id
+        in: path
+        description: cart Id
+        required: true
+        type: integer
+      responses:
+        200:
+          description: 'OK'
+        409:
+          description: 'Conflict'
+        500:
+          description: 'Server Error'
+# [GET] order
+  /order:
+    get:
+      tags:
+      - order
+      summary: Find All order
+      responses:
+        200:
+          description: 'OK'
+        500:
+          description: 'Server Error'  
+# [POST] order
+    post:
+      tags:
+      - order
+      summary: Add order
+      parameters:
+      - name: body
+        in: body
+        description: order Data
+        required: true
+        schema:
+          $ref: '#/definitions/order'
+      responses:
+        201:
+          description: 'Created'
+        400:
+          description: 'Bad Request'
+        409:
+          description: 'Conflict'
+        500:
+          description: 'Server Error'
+# [GET] order/id
+  /order/{id}:
+    get:
+      tags:
+      - order
+      summary: Find order By Id
+      parameters:
+      - name: id
+        in: path
+        description: order Id
+        required: true
+        type: integer
+      responses:
+        200:
+          description: 'OK'
+        409:
+          description: 'Conflict'
+        500:
+          description: 'Server Error'
+
+# [PUT] order/id
+    put:
+      tags:
+      - order
+      summary: Update order By Id
+      parameters:
+      - name: id
+        in: path
+        description: order Id
+        required: true
+        type: integer
+      - name: body
+        in: body
+        description: order Data
+        required: true
+        schema:
+          $ref: '#/definitions/order'
+      responses:
+        200:
+          description: 'OK'
+        400:
+          description: 'Bad Request'
+        409:
+          description: 'Conflict'
+        500:
+          description: 'Server Error'
+# [DELETE] order/id
+    delete:
+      tags:
+      - order
+      summary: Delete order By Id
+      parameters:
+      - name: id
+        in: path
+        description: order Id
+        required: true
+        type: integer
+      responses:
+        200:
+          description: 'OK'
+        409:
+          description: 'Conflict'
+        500:
+          description: 'Server Error'
+# [GET] payment
+  /payment:
+    get:
+      tags:
+      - payment
+      summary: Find All payment
+      responses:
+        200:
+          description: 'OK'
+        500:
+          description: 'Server Error'  
+# [POST] payment
+    post:
+      tags:
+      - payment
+      summary: Add payment
+      parameters:
+      - name: body
+        in: body
+        description: payment Data
+        required: true
+        schema:
+          $ref: '#/definitions/payment'
+      responses:
+        201:
+          description: 'Created'
+        400:
+          description: 'Bad Request'
+        409:
+          description: 'Conflict'
+        500:
+          description: 'Server Error'
+# [GET] payment/id
+  /payment/{id}:
+    get:
+      tags:
+      - payment
+      summary: Find payment By Id
+      parameters:
+      - name: id
+        in: path
+        description: payment Id
+        required: true
+        type: integer
+      responses:
+        200:
+          description: 'OK'
+        409:
+          description: 'Conflict'
+        500:
+          description: 'Server Error'
+
+# [PUT] payment/id
+    put:
+      tags:
+      - payment
+      summary: Update payment By Id
+      parameters:
+      - name: id
+        in: path
+        description: payment Id
+        required: true
+        type: integer
+      - name: body
+        in: body
+        description: payment Data
+        required: true
+        schema:
+          $ref: '#/definitions/payment'
+      responses:
+        200:
+          description: 'OK'
+        400:
+          description: 'Bad Request'
+        409:
+          description: 'Conflict'
+        500:
+          description: 'Server Error'
+# [DELETE] payment/id
+    delete:
+      tags:
+      - payment
+      summary: Delete payment By Id
+      parameters:
+      - name: id
+        in: path
+        description: payment Id
+        required: true
+        type: integer
+      responses:
+        200:
+          description: 'OK'
         409:
           description: 'Conflict'
         500:
@@ -221,8 +758,170 @@ definitions:
       total_price:
         type: integer
         description: total price
-      
-      
+  fabric:
+    type: object
+    required:
+        - name
+        - fabric_type
+        - starting_price
+        - color
+        - price
+        - category
+        - milled_country_name
+        - composition
+        - cleaning
+        - small_curtains
+        - medium_curtains
+        - large_curtains
+    properties:
+      id:
+        type: integer
+        description: fabric Id
+      name:
+        type: string
+        description: fabric name
+      fabric_type:
+        type: string
+        description: fabric type
+      starting_price:
+        type: integer
+        description: fabric starting price
+      color:
+        type: string
+        description: fabric color
+      price:
+        type: integer
+        description: fabric price
+      category:
+        type: string
+        description: fabric category
+      milled_country_name:
+        type: string
+        description: milled_country_name
+      composition:
+        type: string
+        description: composition
+      cleaning:
+        type: string
+        description: cleaning
+      small_curtains:
+        type: integer
+        description: small_curtains
+      medium_curtains:
+        type: integer
+        description: medium_curtains
+      large_curtains:
+        type: integer
+        description: large_curtains
+  style:
+    type: object
+    required:
+        - fabric_type
+        - height
+        - width
+        - price
+    properties:
+      id:
+        type: integer
+        description: style Id
+      fabric_type:
+        type: string
+        description: fabric type
+      height:
+        type: integer
+        description: height
+      width:
+        type: integer
+        description: width
+      price:
+        type: integer
+        description: price
+  cart:
+    type: object
+    required:
+        - product_builder_id
+        - user_id
+        - count
+    properties:
+      id:
+        type: integer
+        description: cart Id
+      product_builder_id:
+        type: integer
+        description: product builder id
+      user_id:
+        type: integer
+        description: user id
+      count:
+        type: integer
+        description: count     
+  order:
+    type: object
+    required:
+        - product_builder_id
+        - user_id
+        - cart_id
+        - status
+        - shipping_address
+        - mobile_number
+        - payment_status
+    properties:
+      id:
+        type: integer
+        description: cart Id
+      product_builder_id:
+        type: integer
+        description: product builder id
+      user_id:
+        type: integer
+        description: user id
+      cart_id:
+        type: integer
+        description: cart id  
+      status:
+        type: string
+        description: order status
+      shipping_address:
+        type: string
+        description: shipping address
+      mobile_number:
+        type: integer
+        description: mobile number
+      payment_status:
+        type: integer
+        description: payment status  
+  payment:
+    type: object
+    required:
+        - invoice
+        - amount
+        - order_id
+        - transaction_id
+        - payment_id
+        - transaction_status
+        
+    properties:
+      id:
+        type: integer
+        description: cart Id
+      invoice:
+        type: string
+        description: invoice
+      amount:
+        type: integer
+        description: amount
+      order_id:
+        type: integer
+        description: order id  
+      transaction_id:
+        type: integer
+        description: transaction id
+      payment_id:
+        type: integer
+        description: payment id
+      transaction_status:
+        type: string
+        description: transaction status
 
       
 

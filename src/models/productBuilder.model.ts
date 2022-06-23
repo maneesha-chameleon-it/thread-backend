@@ -1,14 +1,15 @@
 import { Sequelize, DataTypes, Model, Optional } from 'sequelize';
 import { ProductBuilder } from '@interfaces/productBuilder.interface';
 
-export type ProductBuilderCreationAttributes = Optional<ProductBuilder, 'id' | 'fabric_id' | 'measuring_for' | 'type_of_room' 
+export type ProductBuilderCreationAttributes = Optional<ProductBuilder, 'id' | 'fabric_id' | 'user_id' | 'measuring_for' | 'type_of_room' 
 | 'kind_of_room' | 'window_name' | 'pole_or_track_status' | 'width'
 | 'height'| 'panel' | 'curtain_close' | 'style'| 'lining' | 'pole_and_track' 
-| 'poleMaterial' | 'poleDiameter' | 'polEnd' | 'polFinish' | 'trackEnd' | 'trackFinish' | 'pooling' |   'total_price' >;
+| 'poleMaterial' | 'poleDiameter' | 'polEnd' | 'polFinish' | 'trackEnd' | 'trackFinish' | 'pooling' |   'total_price' | 'image'>;
 
 export class ProductBuilderModel extends Model<ProductBuilder, ProductBuilderCreationAttributes> implements ProductBuilder {
   public id: number;
   public fabric_id: number;
+  public user_id: number;
   public measuring_for: string;
   public type_of_room: string;
   public kind_of_room: string;
@@ -29,6 +30,7 @@ export class ProductBuilderModel extends Model<ProductBuilder, ProductBuilderCre
   public trackFinish: string;
   public pooling: string;
   public total_price: number;
+  public image: string;
   public readonly createdAt!: Date;
   public readonly updatedAt!: Date;
 }
@@ -42,6 +44,10 @@ export default function (sequelize: Sequelize): typeof ProductBuilderModel {
         type: DataTypes.INTEGER,
       },
       fabric_id: {
+        allowNull: false,
+        type: DataTypes.INTEGER,
+      },
+      user_id: {
         allowNull: false,
         type: DataTypes.INTEGER,
       },
@@ -124,6 +130,10 @@ export default function (sequelize: Sequelize): typeof ProductBuilderModel {
       total_price: {
         allowNull: false,
         type: DataTypes.INTEGER,
+      },
+      image: {
+        allowNull: false,
+        type: DataTypes.STRING(255),
       },
 
     },
