@@ -1,0 +1,12 @@
+2022-06-09 18:15:54 error: uncaughtException: EIO: i/o error, write
+Error: EIO: i/o error, write
+    at writeSync (node:fs:888:3)
+    at SyncWriteStream._write (node:internal/fs/sync_write_stream:25:3)
+    at writeOrBuffer (node:internal/streams/writable:389:12)
+    at _write (node:internal/streams/writable:330:10)
+    at SyncWriteStream.Writable.write (node:internal/streams/writable:334:10)
+    at Console.log (/home/lenovo/git/thread-backend/node_modules/winston/lib/winston/transports/console.js:79:23)
+    at Console._write (/home/lenovo/git/thread-backend/node_modules/winston-transport/index.js:103:17)
+    at doWrite (/home/lenovo/git/thread-backend/node_modules/winston-transport/node_modules/readable-stream/lib/_stream_writable.js:428:64)
+    at writeOrBuffer (/home/lenovo/git/thread-backend/node_modules/winston-transport/node_modules/readable-stream/lib/_stream_writable.js:417:5)
+    at Console.Writable.write (/home/lenovo/git/thread-backend/node_modules/winston-transport/node_modules/readable-stream/lib/_stream_writable.js:334:11)

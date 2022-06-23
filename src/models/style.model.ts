@@ -24,15 +24,15 @@ export default function (sequelize: Sequelize): typeof StyleModel {
       },
       fabric_type: {
         allowNull: false,
-        type: DataTypes.INTEGER,
+        type: DataTypes.STRING(45),
       },
       height: {
         allowNull: false,
-        type: DataTypes.STRING(45),
+        type: DataTypes.INTEGER,
       },
       width: {
         allowNull: false,
-        type: DataTypes.STRING(255),
+        type: DataTypes.INTEGER,
       },
       price: {
         allowNull: false,

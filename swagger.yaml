@@ -1,7 +1,8 @@
 tags:
 - name: users
   description: users API
-
+- name: productBuilder
+  description: productBuilder API
 paths:
 # [GET] users
   /users:
@@ -103,6 +104,39 @@ paths:
         500:
           description: 'Server Error'
 
+# [GET] productBuilder
+  /productBuilder:
+    get:
+      tags:
+      - productBuilder
+      summary: Find All productBuilders
+      responses:
+        200:
+          description: 'OK'
+        500:
+          description: 'Server Error'  
+# [POST] productBuilder
+    post:
+      tags:
+      - productBuilder
+      summary: Add productBuilder
+      parameters:
+      - name: body
+        in: body
+        description: user Data
+        required: true
+        schema:
+          $ref: '#/definitions/productBuilder'
+      responses:
+        201:
+          description: 'Created'
+        400:
+          description: 'Bad Request'
+        409:
+          description: 'Conflict'
+        500:
+          description: 'Server Error'
+
 # definitions
 definitions:
   users:
@@ -120,6 +154,77 @@ definitions:
       password:
         type: string
         description: user Password
+  productBuilder:
+    type: object
+    required:
+        - fabric_id
+        - measuring_for
+        - type_of_room
+        - kind_of_room
+        - window_name
+        - pole_or_track_status
+        - width
+        - height
+        - panel
+        - curtain_close
+        - style
+        - lining
+        - pole_and_track
+        - pooling
+        - total_price
+    properties:
+      id:
+        type: integer
+        description: productBuilder Id
+      fabric_id:
+        type: integer
+        description: fabric id
+      measuring_for:
+        type: string
+        description: measuring for curtains or blinds
+      type_of_room:
+        type: string
+        description: living room, bed room, ..
+      kind_of_room:
+        type: string
+        description: flat window or bay window
+      window_name:
+        type: string
+        description: window name
+      pole_or_track_status:
+        type: string
+        description: status like yes or no
+      width:
+        type: integer
+        description: width
+      height:
+        type: integer
+        description: length
+      panel:
+        type: string
+        description: single or pair
+      curtain_close:
+        type: string
+        description: left or right
+      style:
+        type: string
+        description: pinch, cartridge, double, eyelet, ...
+      lining:
+        type: string
+        description: lining
+      pole_and_track:
+        type: string
+        description: don't need, pole, track
+      pooling:
+        type: string
+        description: just touching, normal
+      total_price:
+        type: integer
+        description: total price
+      
+      
+
+      
 
 schemes:
  - https

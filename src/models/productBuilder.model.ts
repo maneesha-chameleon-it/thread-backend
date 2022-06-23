@@ -4,8 +4,7 @@ import { ProductBuilder } from '@interfaces/productBuilder.interface';
 export type ProductBuilderCreationAttributes = Optional<ProductBuilder, 'id' | 'fabric_id' | 'measuring_for' | 'type_of_room' 
 | 'kind_of_room' | 'window_name' | 'pole_or_track_status' | 'width'
 | 'height'| 'panel' | 'curtain_close' | 'style'| 'lining' | 'pole_and_track' 
-| 'poleMaterial' | 'poleDiameter' | 'polEnd' | 'polFinish' | 'trackEnd' | 'trackFinish' | 'pooling' |   'total_price' 
-| 'product_type'>;
+| 'poleMaterial' | 'poleDiameter' | 'polEnd' | 'polFinish' | 'trackEnd' | 'trackFinish' | 'pooling' |   'total_price' >;
 
 export class ProductBuilderModel extends Model<ProductBuilder, ProductBuilderCreationAttributes> implements ProductBuilder {
   public id: number;
@@ -30,7 +29,6 @@ export class ProductBuilderModel extends Model<ProductBuilder, ProductBuilderCre
   public trackFinish: string;
   public pooling: string;
   public total_price: number;
-  public product_type: string;
   public readonly createdAt!: Date;
   public readonly updatedAt!: Date;
 }
@@ -126,10 +124,6 @@ export default function (sequelize: Sequelize): typeof ProductBuilderModel {
       total_price: {
         allowNull: false,
         type: DataTypes.INTEGER,
-      },
-      product_type: {
-        allowNull: false,
-        type: DataTypes.STRING(45),
       },
 
     },

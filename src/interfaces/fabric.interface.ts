@@ -1,9 +1,10 @@
 export interface Fabric {
   id: number;
-  product_builder_id: number;
   name: string;
+  fabric_type: string;
+  starting_price: number;
   color: string;
-  price: number;
+  price_per_meter: number;
   category: string;
   milled_country_name: string;
   composition: string;
@@ -11,5 +12,5 @@ export interface Fabric {
   small_curtains: number;
   medium_curtains: number;
   large_curtains: number;
-  fabric_type: string;
+  
   }

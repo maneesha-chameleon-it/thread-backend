@@ -34,6 +34,16 @@
             "date": 1654580183628,
             "name": "/home/lenovo/git/thread-backend/src/logs/error/2022-06-07.log",
             "hash": "1b53d62209e2e3ef1c9315532996596b"
+        },
+        {
+            "date": 1654751557126,
+            "name": "/home/lenovo/git/thread-backend/src/logs/error/2022-06-09.log",
+            "hash": "bad08dbfc5088c47931e570b18f63397"
+        },
+        {
+            "date": 1654835036595,
+            "name": "/home/lenovo/git/thread-backend/src/logs/error/2022-06-10.log",
+            "hash": "e22f1c6704e881f88a98ba031370a831"
         }
     ]
 }

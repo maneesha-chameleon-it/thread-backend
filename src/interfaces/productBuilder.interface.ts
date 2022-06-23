@@ -21,5 +21,4 @@ export interface ProductBuilder {
     trackFinish: string;
     pooling: string;
     total_price: number;
-    product_type: string;
   }

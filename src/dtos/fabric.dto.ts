@@ -1,9 +1,11 @@
 import { IsString, IsNumber } from 'class-validator';
 export class CreateFabricDto {
-  @IsNumber()
-  public product_builder_id: number;
   @IsString()
   public name: string;
+  @IsString()
+  public fabric_type: string;
+  @IsNumber()
+  public starting_price: number;
   @IsString()
   public color: string;
   @IsNumber()
@@ -21,8 +23,5 @@ export class CreateFabricDto {
   @IsNumber()
   public medium_curtains: number;
   @IsNumber()
-  public large_curtains: number;
-  @IsString()
-  public fabric_type: string;
-  
+  public large_curtains: number; 
 }
