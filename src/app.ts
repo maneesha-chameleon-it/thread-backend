@@ -15,6 +15,7 @@ import { Routes } from '@interfaces/routes.interface';
 import errorMiddleware from '@middlewares/error.middleware';
 import { logger, stream } from '@utils/logger';
 import authMiddleware from './middlewares/auth.middleware';
+import adminMiddleware from './middlewares/admin.middleware';
 
 class App {
   public app: express.Application;
@@ -62,11 +63,12 @@ class App {
   }
 
   private initializeRoutes(routes: Routes[]) {
-    this.app.use('/api/v1/secure', authMiddleware)
+    this.app.use('/api/v1/secure', authMiddleware);
+    this.app.use('/api/v1/secure/admin', adminMiddleware);
     routes.forEach(route => {
       this.app.use('/api/v1/', route.router);
     });
- }
+  }
 
   private initializeSwagger() {
     const options = {

@@ -4,6 +4,7 @@ export interface Fabric {
   fabric_type: string;
   starting_price: number;
   color: string;
+  material_type: string;
   price_per_meter: number;
   category: string;
   milled_country_name: string;

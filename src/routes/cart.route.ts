@@ -6,7 +6,7 @@ import validationMiddleware from '@middlewares/validation.middleware';
 import { requestJson } from '@middlewares/request';
 
 class CartRoute implements Routes {
-  public path = '/cart';
+  public path = '/secure/cart';
   public router = Router();
   public cartController = new CartController();
 

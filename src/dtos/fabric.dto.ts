@@ -8,6 +8,8 @@ export class CreateFabricDto {
   public starting_price: number;
   @IsString()
   public color: string;
+  @IsString()
+  public material_type: string;
   @IsNumber()
   public price_per_meter: number;
   @IsString()

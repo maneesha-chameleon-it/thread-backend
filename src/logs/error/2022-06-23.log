@@ -1,0 +1,12 @@
+2022-06-23 11:33:42 error: uncaughtException: listen EADDRINUSE: address already in use :::3008
+Error: listen EADDRINUSE: address already in use :::3008
+    at Server.setupListenHandle [as _listen2] (node:net:1372:16)
+    at listenInCluster (node:net:1420:12)
+    at Server.listen (node:net:1508:7)
+    at Function.listen (/home/lenovo/git/thread-backend/node_modules/express/lib/application.js:618:24)
+    at App.listen (/home/lenovo/git/thread-backend/src/app.ts:37:14)
+    at Object.<anonymous> (/home/lenovo/git/thread-backend/src/server.ts:18:5)
+    at Module._compile (node:internal/modules/cjs/loader:1105:14)
+    at Module.m._compile (/home/lenovo/git/thread-backend/node_modules/ts-node/src/index.ts:1371:23)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1159:10)
+    at Object.require.extensions.<computed> [as .ts] (/home/lenovo/git/thread-backend/node_modules/ts-node/src/index.ts:1374:12)

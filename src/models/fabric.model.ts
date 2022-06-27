@@ -2,7 +2,7 @@ import { Sequelize, DataTypes, Model, Optional } from 'sequelize';
 import { Fabric } from '@interfaces/fabric.interface';
 
 export type FabricCreationAttributes = Optional<Fabric, 'id' | 'name' | 'fabric_type' | 'starting_price' | 'color' 
-| 'price_per_meter' | 'category' | 'milled_country_name' | 'composition'
+| 'material_type' | 'price_per_meter' | 'category' | 'milled_country_name' | 'composition'
 | 'cleaning'| 'small_curtains'| 'medium_curtains'| 'large_curtains' | 'image' >;
 
 export class FabricModel extends Model<Fabric, FabricCreationAttributes> implements Fabric {
@@ -11,6 +11,7 @@ export class FabricModel extends Model<Fabric, FabricCreationAttributes> impleme
   public fabric_type: string;
   public starting_price: number;
   public color: string;
+  public material_type: string;
   public price_per_meter: number;
   public category: string;
   public milled_country_name: string;
@@ -45,6 +46,10 @@ export default function (sequelize: Sequelize): typeof FabricModel {
         type: DataTypes.INTEGER,
       },
       color: {
+        allowNull: false,
+        type: DataTypes.STRING(45),
+      },
+      material_type: {
         allowNull: false,
         type: DataTypes.STRING(45),
       },

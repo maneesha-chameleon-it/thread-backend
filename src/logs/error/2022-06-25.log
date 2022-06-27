@@ -1,0 +1,103 @@
+2022-06-25 09:56:03 error: uncaughtException: EIO: i/o error, write
+Error: EIO: i/o error, write
+    at writeSync (node:fs:888:3)
+    at SyncWriteStream._write (node:internal/fs/sync_write_stream:25:3)
+    at writeOrBuffer (node:internal/streams/writable:389:12)
+    at _write (node:internal/streams/writable:330:10)
+    at SyncWriteStream.Writable.write (node:internal/streams/writable:334:10)
+    at Console.log (/home/lenovo/git/thread-backend/node_modules/winston/lib/winston/transports/console.js:79:23)
+    at Console._write (/home/lenovo/git/thread-backend/node_modules/winston-transport/index.js:103:17)
+    at doWrite (/home/lenovo/git/thread-backend/node_modules/winston-transport/node_modules/readable-stream/lib/_stream_writable.js:428:64)
+    at writeOrBuffer (/home/lenovo/git/thread-backend/node_modules/winston-transport/node_modules/readable-stream/lib/_stream_writable.js:417:5)
+    at Console.Writable.write (/home/lenovo/git/thread-backend/node_modules/winston-transport/node_modules/readable-stream/lib/_stream_writable.js:334:11)
+2022-06-25 13:24:17 error: [POST] /api/v1/login >> StatusCode:: 400, Message:: email must be an email
+2022-06-25 14:46:20 error: [POST] /api/v1/secure/fabric >> StatusCode:: 401, Message:: Wrong authentication token
+2022-06-25 14:46:37 error: [POST] /api/v1/secure/admin/fabric >> StatusCode:: 401, Message:: Wrong authentication token
+2022-06-25 14:46:38 error: [POST] /api/v1/secure/admin/fabric >> StatusCode:: 401, Message:: Wrong authentication token
+2022-06-25 14:47:18 error: [POST] /api/v1/secure/users >> StatusCode:: 400, Message:: name must be a string, role must be a string, phoneNumber must be a number conforming to the specified constraints, address must be a string, emailStatus must be a string
+2022-06-25 14:52:58 error: uncaughtException: EIO: i/o error, write
+Error: EIO: i/o error, write
+    at writeSync (node:fs:888:3)
+    at SyncWriteStream._write (node:internal/fs/sync_write_stream:25:3)
+    at writeOrBuffer (node:internal/streams/writable:389:12)
+    at _write (node:internal/streams/writable:330:10)
+    at SyncWriteStream.Writable.write (node:internal/streams/writable:334:10)
+    at Console.log (/home/lenovo/git/thread-backend/node_modules/winston/lib/winston/transports/console.js:79:23)
+    at Console._write (/home/lenovo/git/thread-backend/node_modules/winston-transport/index.js:103:17)
+    at doWrite (/home/lenovo/git/thread-backend/node_modules/winston-transport/node_modules/readable-stream/lib/_stream_writable.js:428:64)
+    at writeOrBuffer (/home/lenovo/git/thread-backend/node_modules/winston-transport/node_modules/readable-stream/lib/_stream_writable.js:417:5)
+    at Console.Writable.write (/home/lenovo/git/thread-backend/node_modules/winston-transport/node_modules/readable-stream/lib/_stream_writable.js:334:11)
+2022-06-25 14:52:59 error: uncaughtException: listen EADDRINUSE: address already in use :::3008
+Error: listen EADDRINUSE: address already in use :::3008
+    at Server.setupListenHandle [as _listen2] (node:net:1372:16)
+    at listenInCluster (node:net:1420:12)
+    at Server.listen (node:net:1508:7)
+    at Function.listen (/home/lenovo/git/thread-backend/node_modules/express/lib/application.js:618:24)
+    at App.listen (/home/lenovo/git/thread-backend/src/app.ts:37:14)
+    at Object.<anonymous> (/home/lenovo/git/thread-backend/src/server.ts:18:5)
+    at Module._compile (node:internal/modules/cjs/loader:1105:14)
+    at Module.m._compile (/home/lenovo/git/thread-backend/node_modules/ts-node/src/index.ts:1371:23)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1159:10)
+    at Object.require.extensions.<computed> [as .ts] (/home/lenovo/git/thread-backend/node_modules/ts-node/src/index.ts:1374:12)
+2022-06-25 14:54:27 error: uncaughtException: adminMiddleware is not defined
+ReferenceError: adminMiddleware is not defined
+    at App.initializeRoutes (/home/lenovo/git/thread-backend/src/app.ts:66:42)
+    at new App (/home/lenovo/git/thread-backend/src/app.ts:31:10)
+    at Object.<anonymous> (/home/lenovo/git/thread-backend/src/server.ts:16:13)
+    at Module._compile (node:internal/modules/cjs/loader:1105:14)
+    at Module.m._compile (/home/lenovo/git/thread-backend/node_modules/ts-node/src/index.ts:1371:23)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1159:10)
+    at Object.require.extensions.<computed> [as .ts] (/home/lenovo/git/thread-backend/node_modules/ts-node/src/index.ts:1374:12)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:77:12)
+2022-06-25 15:07:31 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/controllers/fabric.controller.ts[0m:[93m36[0m:[93m3[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m36[0m   public updateFabric = async (req: Request, res: Response, next: NextFunction) => {
+[7m  [0m [91m  ~~~~~~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/controllers/fabric.controller.ts[0m:[93m36[0m:[93m3[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m36[0m   public updateFabric = async (req: Request, res: Response, next: NextFunction) => {
+[7m  [0m [91m  ~~~~~~[0m
+
+    at createTSError (/home/lenovo/git/thread-backend/node_modules/ts-node/src/index.ts:750:12)
+    at reportTSError (/home/lenovo/git/thread-backend/node_modules/ts-node/src/index.ts:754:19)
+    at /home/lenovo/git/thread-backend/node_modules/ts-node/src/index.ts:1216:34
+    at Object.compile (/home/lenovo/git/thread-backend/node_modules/ts-node/src/index.ts:1243:30)
+    at Module.m._compile (/home/lenovo/git/thread-backend/node_modules/ts-node/src/index.ts:1370:30)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1159:10)
+    at Object.require.extensions.<computed> [as .ts] (/home/lenovo/git/thread-backend/node_modules/ts-node/src/index.ts:1374:12)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at Module.require (node:internal/modules/cjs/loader:1005:19)
+2022-06-25 15:07:52 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/controllers/fabric.controller.ts[0m:[93m35[0m:[93m3[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m35[0m   public updateFabric = async (req: Request, res: Response, next: NextFunction) => {
+[7m  [0m [91m  ~~~~~~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/controllers/fabric.controller.ts[0m:[93m35[0m:[93m3[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m35[0m   public updateFabric = async (req: Request, res: Response, next: NextFunction) => {
+[7m  [0m [91m  ~~~~~~[0m
+
+    at createTSError (/home/lenovo/git/thread-backend/node_modules/ts-node/src/index.ts:750:12)
+    at reportTSError (/home/lenovo/git/thread-backend/node_modules/ts-node/src/index.ts:754:19)
+    at /home/lenovo/git/thread-backend/node_modules/ts-node/src/index.ts:1216:34
+    at Object.compile (/home/lenovo/git/thread-backend/node_modules/ts-node/src/index.ts:1243:30)
+    at Module.m._compile (/home/lenovo/git/thread-backend/node_modules/ts-node/src/index.ts:1370:30)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1159:10)
+    at Object.require.extensions.<computed> [as .ts] (/home/lenovo/git/thread-backend/node_modules/ts-node/src/index.ts:1374:12)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at Module.require (node:internal/modules/cjs/loader:1005:19)
+2022-06-25 15:18:20 error: [POST] /api/v1/signup >> StatusCode:: 400, Message:: property fabric_type should not exist, property starting_price should not exist, property color should not exist, property price_per_meter should not exist, property category should not exist, property milled_country_name should not exist, property composition should not exist, property cleaning should not exist, property small_curtains should not exist, property medium_curtains should not exist, property large_curtains should not exist, property image should not exist, email must be an email, password must be a string, role must be a string, phoneNumber must be a number conforming to the specified constraints, address must be a string, emailStatus must be a string
+2022-06-25 16:03:02 error: [POST] /api/v1/signup >> StatusCode:: 400, Message:: name must be a string, role must be a string, phoneNumber must be a number conforming to the specified constraints, address must be a string, emailStatus must be a string
+2022-06-25 16:03:15 error: [POST] /api/v1/signup >> StatusCode:: 400, Message:: name must be a string, role must be a string, phoneNumber must be a number conforming to the specified constraints, address must be a string, emailStatus must be a string
+2022-06-25 16:04:15 error: [POST] /api/v1/secure/admin/fabric >> StatusCode:: 401, Message:: Admin only
+2022-06-25 16:05:29 error: [POST] /api/v1/secure/admin/fabric >> StatusCode:: 401, Message:: Admin only
+2022-06-25 16:05:35 error: [POST] /api/v1/secure/admin/fabric >> StatusCode:: 401, Message:: Admin only

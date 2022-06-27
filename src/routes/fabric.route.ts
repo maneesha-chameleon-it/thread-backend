@@ -7,6 +7,7 @@ import { requestJson } from '@middlewares/request';
 
 class FabricRoute implements Routes {
   public path = '/fabric';
+  public adminPath = '/secure/admin/fabric';
   public router = Router();
   public fabricController = new FabricController();
 
@@ -16,10 +17,10 @@ class FabricRoute implements Routes {
 
   private initializeRoutes() {
     this.router.get(`${this.path}`,requestJson(this.fabricController.getFabric, 'GET_FABRIC'));
-    this.router.get(`${this.path}/:id(\\d+)`, requestJson(this.fabricController.getFabricById, 'GET_Fabric'));
-    this.router.post(`${this.path}`, validationMiddleware(CreateFabricDto, 'body'), requestJson(this.fabricController.createFabric, 'CREATE_Fabric'));
-    this.router.put(`${this.path}/:id(\\d+)`, validationMiddleware(CreateFabricDto, 'body', true), requestJson(this.fabricController.updateFabric, 'UPDATE_Fabric'));
-    this.router.delete(`${this.path}/:id(\\d+)`, requestJson(this.fabricController.deleteFabric,'DELETE_Fabric'));
+    this.router.get(`${this.path}/:id(\\d+)`, requestJson(this.fabricController.getFabricById, 'GET_FABRIC'));
+    this.router.post(`${this.adminPath}`, validationMiddleware(CreateFabricDto, 'body'), requestJson(this.fabricController.createFabric, 'CREATE_Fabric'));
+    this.router.put(`${this.adminPath}/:id(\\d+)`, validationMiddleware(CreateFabricDto, 'body', true), requestJson(this.fabricController.updateFabric, 'UPDATE_Fabric'));
+    this.router.delete(`${this.adminPath}/:id(\\d+)`, requestJson(this.fabricController.deleteFabric,'DELETE_Fabric'));
   }
 }
 

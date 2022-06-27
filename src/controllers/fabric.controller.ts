@@ -2,6 +2,8 @@ import { NextFunction, Request, Response } from 'express';
 import { CreateFabricDto } from '@dtos/fabric.dto';
 import { Fabric } from '@interfaces/fabric.interface';
 import fabricService from '@services/fabric.service';
+import { RequestWithUser } from '@/interfaces/auth.interface';
+import { HttpException } from '@/exceptions/HttpException';
 
 class FabricController {
   public fabricService = new fabricService();
@@ -17,10 +19,19 @@ class FabricController {
       return findOneFabricData;
   };
 
-  public createFabric = async (req: Request, res: Response, next: NextFunction) => {
-      const fabricData: CreateFabricDto = req.body;
-      const createFabricData: Fabric = await this.fabricService.createFabric(fabricData);
-      return createFabricData;
+  public createFabric = async (req: RequestWithUser, res: Response, next: NextFunction) => {
+    try {
+        const fabricData: CreateFabricDto = req.body;
+        const userData = req.user;
+        if (userData.role == 'ADMIN') {
+        const createFabricData: Fabric = await this.fabricService.createFabric(fabricData);
+        return createFabricData;
+        } else {
+            throw new HttpException(400, 'ADMIN ONLY');
+        }
+    } catch (e) {
+        console.log(e);
+      }  
   };
 
   public updateFabric = async (req: Request, res: Response, next: NextFunction) => {
