@@ -3,7 +3,7 @@ import { Fabric } from '@interfaces/fabric.interface';
 
 export type FabricCreationAttributes = Optional<Fabric, 'id' | 'name' | 'fabric_type' | 'starting_price' | 'color' 
 | 'material_type' | 'price_per_meter' | 'category' | 'milled_country_name' | 'composition'
-| 'cleaning'| 'small_curtains'| 'medium_curtains'| 'large_curtains' | 'image' >;
+| 'cleaning'| 'small_curtains'| 'medium_curtains'| 'large_curtains' | 'image_small' | 'image_big' >;
 
 export class FabricModel extends Model<Fabric, FabricCreationAttributes> implements Fabric {
   public id: number;
@@ -20,7 +20,8 @@ export class FabricModel extends Model<Fabric, FabricCreationAttributes> impleme
   public small_curtains: number;
   public medium_curtains: number;
   public large_curtains: number;
-  public image: string;
+  public image_small: string;
+  public image_big:string;
   public readonly createdAt!: Date;
   public readonly updatedAt!: Date;
 }
@@ -85,7 +86,11 @@ export default function (sequelize: Sequelize): typeof FabricModel {
         allowNull: false,
         type: DataTypes.INTEGER,
       },
-      image: {
+      image_small: {
+        allowNull: false,
+        type: DataTypes.STRING(255),
+      },
+      image_big: {
         allowNull: false,
         type: DataTypes.STRING(255),
       }

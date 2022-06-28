@@ -13,5 +13,6 @@ export interface Fabric {
   small_curtains: number;
   medium_curtains: number;
   large_curtains: number;
-  image:string;
+  image_small:string;
+  image_big:string;
   }
