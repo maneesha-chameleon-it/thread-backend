@@ -6,7 +6,7 @@ import validationMiddleware from '@middlewares/validation.middleware';
 import { requestJson } from '@middlewares/request';
 
 class PaymentRoute implements Routes {
-  public path = '/payment';
+  public path = '/secure/payment';
   public router = Router();
   public paymentController = new PaymentController();
 

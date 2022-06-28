@@ -2,13 +2,13 @@ import { Sequelize, DataTypes, Model, Optional } from 'sequelize';
 import { Order } from '@interfaces/order.interface';
 
 export type OrderCreationAttributes = Optional<Order, 'id' | 'product_builder_id' | 'user_id' 
-| 'cart_id' | 'status' | 'shipping_address' | 'mobile_number' | 'payment_status'>;
+| 'count' | 'status' | 'shipping_address' | 'mobile_number' | 'payment_status'>;
 
 export class OrderModel extends Model<Order, OrderCreationAttributes> implements Order {
   public id: number;
   public product_builder_id: number;
   public user_id: number;
-  public cart_id: number;
+  public count: number;
   public status: string;
   public shipping_address: string;
   public mobile_number: number;
@@ -33,7 +33,7 @@ export default function (sequelize: Sequelize): typeof OrderModel {
         allowNull: false,
         type: DataTypes.INTEGER,
       },
-      cart_id: {
+      count: {
         allowNull: false,
         type: DataTypes.INTEGER,
       },

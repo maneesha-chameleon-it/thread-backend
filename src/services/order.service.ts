@@ -4,12 +4,12 @@ import { CreateOrderDto } from '@dtos/order.dto';
 import { HttpException } from '@exceptions/HttpException';
 import { Order } from '@interfaces/order.interface';
 import { isEmpty } from '@utils/util';
-
+import { QueryTypes } from 'sequelize';
 class OrderService {
   public order = DB.Order;
-
-  public async findAllOrder(): Promise<Order[]> {
-    const allOrder: Order[] = await this.order.findAll();
+  public cart = DB.Cart;
+  public async findAllOrder(user): Promise<Order[]> {
+    const allOrder: Order[] = await this.order.findAll({ where: { user_id: user.id } });
     return allOrder;
   }
 
@@ -22,10 +22,25 @@ class OrderService {
     return findOrder;
   }
 
-  public async placeOrder(orderData: CreateOrderDto): Promise<Order> {
+  public async placeOrder(orderData: CreateOrderDto, user): Promise<Order> {
     if (isEmpty(orderData)) throw new HttpException(400, "You're not orderData");
     const createOrderData: Order = await this.order.create({ ...orderData, });
     return createOrderData;
+
+    // try {
+    //   const allCart: any[] = await DB.sequelize.query(`select user_id,product_builder_id,count from cart C where C.user_id=${user.id} `, {
+    //     type: QueryTypes.SELECT,
+    //   });
+    //   if (!allCart || !allCart.length) {
+    //     throw new HttpException(400, 'Cart is empty');
+    //   }
+    //   const createOrderData: Order[] = await this.order.bulkCreate(allCart);
+    //   await this.cart.destroy({ where: { user_id: user.id } });
+    //   return createOrderData;
+    // } catch (e) {
+    //   console.log(e);
+    //   throw new HttpException(400, 'Failed to place order');
+    // }
   }
 
   public async updateOrder(orderId: number, orderData: CreateOrderDto): Promise<Order> {

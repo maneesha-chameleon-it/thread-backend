@@ -16,7 +16,7 @@ tags:
 
 paths:
 # [GET] users
-  /users:
+  /secure/users:
     get:
       tags:
       - users
@@ -50,7 +50,7 @@ paths:
           description: 'Server Error'
 
 # [GET] users/id
-  /users/{id}:
+  /secure/users/{id}:
     get:
       tags:
       - users
@@ -213,7 +213,7 @@ paths:
           description: 'Server Error'          
 
 # [GET] fabric
-  /fabric:
+  /secure/admin/fabric:
     get:
       tags:
       - fabric
@@ -247,7 +247,7 @@ paths:
           description: 'Server Error'
 
 # [GET] fabric/id
-  /fabric/{id}:
+  /secure/admin/fabric/{id}:
     get:
       tags:
       - fabric
@@ -406,7 +406,7 @@ paths:
         500:
           description: 'Server Error'
 # [GET] cart
-  /cart:
+  /secure/cart:
     get:
       tags:
       - cart
@@ -482,7 +482,7 @@ paths:
         500:
           description: 'Server Error'
 # [GET] order
-  /order:
+  /secure/order:
     get:
       tags:
       - order
@@ -514,7 +514,7 @@ paths:
         500:
           description: 'Server Error'
 # [GET] order/id
-  /order/{id}:
+  /secure/order/{id}:
     get:
       tags:
       - order
@@ -578,7 +578,7 @@ paths:
         500:
           description: 'Server Error'
 # [GET] payment
-  /payment:
+  /secure/payment:
     get:
       tags:
       - payment
@@ -610,7 +610,7 @@ paths:
         500:
           description: 'Server Error'
 # [GET] payment/id
-  /payment/{id}:
+  /secure/payment/{id}:
     get:
       tags:
       - payment

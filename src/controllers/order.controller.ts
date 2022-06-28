@@ -2,12 +2,13 @@ import { NextFunction, Request, Response } from 'express';
 import { CreateOrderDto } from '@dtos/order.dto';
 import { Order } from '@interfaces/order.interface';
 import orderService from '@services/order.service';
+import { RequestWithUser } from '@/interfaces/auth.interface';
 
 class OrderController {
   public orderService = new orderService();
 
-  public  getOrder = async(req: Request, res: Response, next: NextFunction)  => {
-      const findAllOrderData: Order[] = await this.orderService.findAllOrder();
+  public  getOrder = async(req: RequestWithUser, res: Response, next: NextFunction)  => {
+      const findAllOrderData: Order[] = await this.orderService.findAllOrder(req.user);
       return findAllOrderData
   };
 
@@ -17,9 +18,9 @@ class OrderController {
       return findOneOrderData;
   };
 
-  public placeOrder = async (req: Request, res: Response, next: NextFunction) => {
+  public placeOrder = async (req: RequestWithUser, res: Response, next: NextFunction) => {
       const orderData: CreateOrderDto = req.body;
-      const createOrderData: Order = await this.orderService.placeOrder(orderData);
+      const createOrderData: Order = await this.orderService.placeOrder(orderData, req.user);
       return createOrderData;
   };
 
