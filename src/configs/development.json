@@ -1,5 +1,5 @@
 {
-    "env": "test",
+    "env": "development",
     "PORT": 3008,
     "dbConfig": {
         "host": "localhost",
@@ -17,7 +17,7 @@
         "dir": "../logs"
     },
     "cors": {
-        "origin": true,
+        "origin": "*",
         "credentials": true
     },
     "serverConfig": {

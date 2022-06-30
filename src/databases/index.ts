@@ -9,6 +9,7 @@ import  StyleModel  from '@/models/style.model';
 import CartModel from '@/models/cart.model';
 import OrderModel from '@/models/order.model';
 import PaymentModel from '@/models/payment.model'
+import OrderDetailsModel  from '@/models/orderDetails';
 
 const { host, user, password, database, pool }: dbConfig = config.get('dbConfig');
 const sequelize = new Sequelize.Sequelize(database, user, password, {
@@ -41,6 +42,7 @@ const DB = {
   Style: StyleModel(sequelize),
   Cart: CartModel(sequelize),
   Order: OrderModel(sequelize),
+  OrderDetails: OrderDetailsModel(sequelize),
   Payment: PaymentModel(sequelize),
   sequelize, // connection instance (RAW queries)
   Sequelize, // library

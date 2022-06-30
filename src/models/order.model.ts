@@ -2,17 +2,14 @@ import { Sequelize, DataTypes, Model, Optional } from 'sequelize';
 import { Order } from '@interfaces/order.interface';
 
 export type OrderCreationAttributes = Optional<Order, 'id' | 'product_builder_id' | 'user_id' 
-| 'count' | 'status' | 'shipping_address' | 'mobile_number' | 'payment_status'>;
+| 'count' | 'order_status'>;
 
 export class OrderModel extends Model<Order, OrderCreationAttributes> implements Order {
   public id: number;
   public product_builder_id: number;
   public user_id: number;
   public count: number;
-  public status: string;
-  public shipping_address: string;
-  public mobile_number: number;
-  public payment_status: string;
+  public order_status: string;
   public readonly createdAt!: Date;
   public readonly updatedAt!: Date;
 }
@@ -37,21 +34,10 @@ export default function (sequelize: Sequelize): typeof OrderModel {
         allowNull: false,
         type: DataTypes.INTEGER,
       },
-      status: {
+      order_status: {
         allowNull: false,
         type: DataTypes.STRING(45),
-      },
-      shipping_address: {
-        allowNull: false,
-        type: DataTypes.STRING(255),
-      },
-      mobile_number: {
-        allowNull: false,
-        type: DataTypes.STRING(45),
-      },
-      payment_status: {
-        allowNull: false,
-        type: DataTypes.STRING(45),
+        defaultValue: 'PENDING',
       },
 
     },

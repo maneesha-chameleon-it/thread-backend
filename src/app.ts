@@ -16,6 +16,7 @@ import errorMiddleware from '@middlewares/error.middleware';
 import { logger, stream } from '@utils/logger';
 import authMiddleware from './middlewares/auth.middleware';
 import adminMiddleware from './middlewares/admin.middleware';
+import path, { dirname } from 'path';
 
 class App {
   public app: express.Application;
@@ -26,7 +27,8 @@ class App {
     this.app = express();
     this.port = process.env.PORT || 3000;
     this.env = process.env.NODE_ENV || 'development';
-
+    this.app.use("/productBuilder", express.static(path.join(__dirname, 'public/')))
+    this.app.use("/", express.static(path.join(__dirname, 'home/')))
     this.connectToDatabase();
     this.initializeMiddlewares();
     this.initializeRoutes(routes);

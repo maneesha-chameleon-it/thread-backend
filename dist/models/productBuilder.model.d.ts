@@ -1,0 +1,32 @@
+import { Sequelize, Model, Optional } from 'sequelize';
+import { ProductBuilder } from '@interfaces/productBuilder.interface';
+export declare type ProductBuilderCreationAttributes = Optional<ProductBuilder, 'id' | 'fabric_id' | 'user_id' | 'measuring_for' | 'type_of_room' | 'kind_of_room' | 'window_name' | 'pole_or_track_status' | 'width' | 'height' | 'panel' | 'curtain_close' | 'style' | 'lining' | 'pole_and_track' | 'poleMaterial' | 'poleDiameter' | 'polEnd' | 'polFinish' | 'trackEnd' | 'trackFinish' | 'pooling' | 'total_price' | 'image'>;
+export declare class ProductBuilderModel extends Model<ProductBuilder, ProductBuilderCreationAttributes> implements ProductBuilder {
+    id: number;
+    fabric_id: number;
+    user_id: number;
+    measuring_for: string;
+    type_of_room: string;
+    kind_of_room: string;
+    window_name: string;
+    pole_or_track_status: string;
+    width: number;
+    height: number;
+    panel: string;
+    curtain_close: string;
+    style: string;
+    lining: string;
+    pole_and_track: string;
+    poleMaterial: string;
+    poleDiameter: number;
+    polEnd: string;
+    polFinish: string;
+    trackEnd: string;
+    trackFinish: string;
+    pooling: string;
+    total_price: number;
+    image: string;
+    readonly createdAt: Date;
+    readonly updatedAt: Date;
+}
+export default function (sequelize: Sequelize): typeof ProductBuilderModel;
